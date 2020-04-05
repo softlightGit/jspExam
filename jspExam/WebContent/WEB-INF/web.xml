@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+   
+  <!-- 配置AddServlet -->
+  <servlet>
+    <description></description>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>com.servlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
+   
+  <!-- 配置DeleteServlet -->
+  <servlet>
+    <description></description>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>com.servlet.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 配置GetOldInfoServlet -->
+  <servlet>
+  	<servlet-name>GetOldInfoServlet</servlet-name>
+    <servlet-class>com.servlet.GetOldInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	 <servlet-name>GetOldInfoServlet</servlet-name>
+     <url-pattern>/GetOldInfoServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 配置UpdateServlet -->
+  <servlet>  
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.servlet.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <!-- 配置FindAllServlet -->
+  <servlet>
+    <servlet-name>FindAllServlet</servlet-name>
+    <servlet-class>com.servlet.FindAllServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindAllServlet</servlet-name>
+    <url-pattern>/FindAllServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 配置applicationContext.xml的实例化 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/applicationContext.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener> 
+  
+</web-app>
